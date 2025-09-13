@@ -18,7 +18,6 @@ variable "username" {
 variable "password" {
     
     description = "Password for RDS database"
-    default     = "Kingdown1234"
     sensitive   = true
     type        = string
 
