@@ -14,7 +14,7 @@ resource "aws_instance" "frontend"{
     vpc_security_group_ids = [aws_security_group.frontend_sg.id]
    
     tags = {
-      "name"        = "${terraform.workspace}-frontend" 
+      "Name"        = "${terraform.workspace}-frontend" 
       "Environment" = "${terraform.workspace}"
     }
 
@@ -80,7 +80,7 @@ resource "aws_vpc_security_group_egress_rule""allow_all_outbound" {
 #     service_name      = "com.amazonaws-us-east-1.rds"
 
 #     tags = {
-#       "name" = "${terraform.workspace}" 
+#       "Name" = "${terraform.workspace}" 
 #     }
   
 # }
