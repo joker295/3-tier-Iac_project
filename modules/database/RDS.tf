@@ -17,7 +17,7 @@ resource"aws_db_instance""db_instance"{
     publicly_accessible    =  false
 
     tags = {
-      "name"        = "${terraform.workspace}-db"
+      "Name"        = "${terraform.workspace}-db"
       "Environment" =  "${terraform.workspace}"
     }
 
