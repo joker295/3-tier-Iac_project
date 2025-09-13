@@ -33,7 +33,7 @@ resource "aws_subnet""public_subnet" {
     availability_zone = var.azs[count.index] 
     tags = {
 
-        Name = "${terraform.workspace}-public-{count.index}" 
+        Name = "${terraform.workspace}-public-${count.index+1}" 
 
         }
 }
@@ -47,7 +47,7 @@ resource "aws_subnet""private_subnet"{
     cidr_block = var.private_cidr[count.index]
     tags={
 
-        Name = "${terraform.workspace}-private-{count.index}" 
+        Name = "${terraform.workspace}-private-${count.index+1}" 
         }
 
 }
