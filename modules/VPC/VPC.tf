@@ -6,7 +6,7 @@ resource "aws_vpc""UAT-VPC"{
     cidr_block = var.cidr_block
     enable_dns_hostnames = true
     tags = {
-        Name= "${terraform.workspace}-${var.vpc_name}"
+        Name= "${terraform.workspace}_${var.vpc_name}"
     }
   
 }
@@ -33,7 +33,7 @@ resource "aws_subnet""public_subnet" {
     availability_zone = var.azs[count.index] 
     tags = {
 
-        name = "${terraform.workspace}-public-{count.index}" 
+        Name = "${terraform.workspace}-public-{count.index}" 
 
         }
 }
@@ -47,7 +47,7 @@ resource "aws_subnet""private_subnet"{
     cidr_block = var.private_cidr[count.index]
     tags={
 
-        name = "${terraform.workspace}-private-{count.index}" 
+        Name = "${terraform.workspace}-private-{count.index}" 
         }
 
 }
@@ -83,7 +83,7 @@ resource"aws_route_table""public_route_table"{
     }  
 
     tags = {
-      name = "${terraform.workspace}_public-rt" 
+      Name = "${terraform.workspace}_public-rt" 
     }
     
 }
@@ -112,7 +112,7 @@ resource"aws_route_table""private_route_table"{
     }  
 
     tags = {
-      name = "${terraform.workspace}_private-rt" 
+      Name = "${terraform.workspace}_private-rt" 
     }       
     
 }
