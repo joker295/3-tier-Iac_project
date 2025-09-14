@@ -41,14 +41,15 @@ The infrastructure includes:
 │   └── prod/
 ├── modules/
 │   ├── vpc/
-│   ├── ec2/
+│   ├── frontwnd/
 │   ├── database/
-│   └── networking/
+│   
 ├── variables.tf
 ├── main.tf
 ├── outputs.tf
-├── terraform.tfvars.example
-└── README.md
+├── asset
+    └──Diagram.png
+└── Readme.md
 ```
 
 ## 🚀 Quick Start
