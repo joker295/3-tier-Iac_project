@@ -136,7 +136,7 @@ Key variables that can be customized:
 | `environment` | Environment name (dev/staging/prod) | `dev` | Yes |
 | `vpc_cidr` | CIDR block for VPC | `10.0.0.0/16` | No |
 | `instance_type` | EC2 instance type | `t3.micro` | No |
-| `key_pair_name` | AWS key pair for EC2 access | - | Yes |
+
 
 ### Example terraform.tfvars
 
@@ -158,7 +158,7 @@ key_pair_name   = "my-key-pair"
 ### EC2 Module
 - Provisions EC2 instances
 - Configures security groups
-- Sets up key pair authentication
+
 
 ### Database Module
 - Creates RDS instances
@@ -181,7 +181,7 @@ Each environment can have different configurations and resource sizes.
 - Enable encryption for databases and storage
 - Configure security groups with minimal required access
 - Use private subnets for sensitive resources
-- Regularly update and patch EC2 instances
+  
 
 ## 🤝 Contributing
 
